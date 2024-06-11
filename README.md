@@ -4,6 +4,6 @@ My Technical Resume based on the template of [Sourabh Bajaj Resume](https://gith
 
 Made with LaTeX and Overleaf.
 
-Updated as per April 22nd 2024.
+Updated as per June 12th 2024.
 
 ![resume](./resume.png)
