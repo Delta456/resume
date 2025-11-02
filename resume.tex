@@ -1,8 +1,8 @@
 %-------------------------
 % Resume in Latex
-% Author : Jake Gutierrez
-% Based off of: https://github.com/sb2nov/resume
-% License : MIT
+% Author: Jake Gutierrez
+% Based on: https://github.com/sb2nov/resume
+% License: MIT
 %------------------------
 
 \documentclass[letterpaper,11pt]{article}
@@ -13,13 +13,19 @@
 \usepackage{marvosym}
 \usepackage[usenames,dvipsnames]{color}
 \usepackage{verbatim}
+
+\usepackage{xcolor}
+\definecolor{linkblue}{HTML}{002776}
+
 \usepackage{enumitem}
-\usepackage[hidelinks]{hyperref}
+\usepackage[colorlinks=true, urlcolor=linkblue, linkcolor=black, citecolor=linkblue]{hyperref}
+\usepackage{xcolor}
 \usepackage{fancyhdr}
 \usepackage[english]{babel}
 \usepackage{tabularx}
 \usepackage{fontawesome5}
 \usepackage{multicol}
+\usepackage{paracol}
 \setlength{\multicolsep}{-3.0pt}
 \setlength{\columnsep}{-1pt}
 \input{glyphtounicode}
@@ -61,7 +67,7 @@
   \vspace{-4pt}\scshape\raggedright\large\bfseries
 }{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
 
-% Ensure that generate pdf is machine readable/ATS parsable
+% Ensure that generated PDF is machine-readable/ATS parsable
 \pdfgentounicode=1
 
 %-------------------------
@@ -110,126 +116,150 @@
 \newcommand{\resumeItemListStart}{\begin{itemize}}
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
 
+
 %-------------------------------------------
 %%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 
 \begin{document}
 
 %----------HEADING----------
-% \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-%   \textbf{\href{http://sourabhbajaj.com/}{\Large Sourabh Bajaj}} & Email : \href{mailto:sourabh@sourabhbajaj.com}{sourabh@sourabhbajaj.com}\\
-%   \href{http://sourabhbajaj.com/}{http://www.sourabhbajaj.com} & Mobile : +1-123-456-7890 \\
-% \end{tabular*}
-
 \begin{center}
-    {\Huge \scshape Swastik Baranwal} \\ \vspace{1pt}
-    \small ~ \href{https://swastik.is-a.dev}{\raisebox{-0.2\height}\faLink\  \underline{swastik.is-a.dev}} ~
-    \small ~ \href{mailto:swstkbaranwal@gmail.com}{\raisebox{-0.2\height}\faEnvelope\  \underline{swstkbaranwal@gmail.com}} ~ 
-    \href{https://linkedin.com/in/swastik-baranwal/}{\raisebox{-0.2\height}\faLinkedin\ \underline{linkedin.com/in/swastik-baranwal}}  ~
-    \href{https://github.com/Delta456}{\raisebox{-0.2\height}\faGithub\ \underline{github.com/Delta456}}
-    \vspace{-8pt}
+	{\Huge \scshape Swastik Baranwal} \\ \vspace{1pt}
+	\small 
+	\href{https://swastik.is-a.dev}{\raisebox{-0.2\height}\faLink\  swastik.is-a.dev} ~|~
+	\href{mailto:swstkbaranwal@gmail.com}{\raisebox{-0.2\height}\faEnvelope\  swstkbaranwal@gmail.com} ~|~
+	\href{https://linkedin.com/in/swastik-baranwal/}{\raisebox{-0.2\height}\faLinkedin\ swastik-baranwal} ~|~
+	\href{https://github.com/Delta456}{\raisebox{-0.2\height}\faGithub\ Delta456}
+	
+	\vspace{-8pt}
+	
+	\columnratio{0.6,0.4} % left:right column ratio
+	\setlength{\columnsep}{1em} % spacing between columns
+	\begin{paracol}{2}
+		
+		% -------------------------------- LEFT COLUMN (Experience) --------------------------------
+		\switchcolumn[0]
+		\raggedright
+		
+		% ----------- Experience Section -----------
+		\section{Experience}
+		\vspace{5pt}
+		\resumeSubHeadingListStart
+		
+		% LambdaTest
+		\item
+		\textbf{\href{https://www.lambdatest.com/}{LambdaTest \faLink}} \hfill \textbf{Aug 2024 -- Present}\\
+		\textit{Software Engineer (OSPO) Intern} \hfill Noida, Uttar Pradesh · Hybrid
+		\resumeItemListStart
+		\resumeItem{Strengthened Selenium’s ecosystem by contributing \textbf{\href{https://w3c.github.io/webdriver-bidi/}{BiDi protocol}} support and performance improvements}
+		\resumeItem{Served as a \textbf{\href{https://www.selenium.dev/project/structure/\#selenium_committers}{committer}} to Selenium, facilitating LambdaTest’s recognition as an official \textbf{\href{https://www.selenium.dev/blog/2025/lambdatest-selenium-partnership/}{development partner \faLink}}}
+		\resumeItem{Implemented services in \textbf{\href{https://github.com/appium/appium-ios-remotexpc}{Appium iOS RemoteXPC}} to enable iOS device communication}
+        \resumeItem{Contributed code to \textbf{\href{https://webdriver.io/}{WebDriverIO}} and updated documentation for \href{https://github.com/MicrosoftDocs/edge-developer/pulls?q=is\%3Apr+author\%3ADelta456+is\%3Amerged}{\textbf{Microsoft Edge Developer}} to reflect the newly made changes}
+		\resumeItem{Collaborated on Selenium 5’s upcoming \textbf{high-level BiDi syntax}, influencing API design decisions across automation frameworks}
+		\resumeItem{Moderated the global \textbf{Hacktoberfest} event, mentoring new contributors and facilitating high-quality open-source pull requests}
+		\resumeItem{Expanded technical proficiency in \textbf{developer tool building}, \textbf{TypeScript/Python/Java development}, and \textbf{open-source governance}}
+		\resumeItem{Represented LambdaTest at international conferences including \textbf{KubeCon India 2024 - OSPOLogy BoF}, where I authored the official session \href{https://github.com/todogroup/ospology/blob/main/BoF/India2024_Report/Report.pdf}{report \faLink} and participated as a \textbf{panelist} in \textbf{\href{https://openuk.uk/indianaisummit/ai-openness-and-access-for-all-delhi/}{OpenUK - Openness and Access for All \faLink}}}
+		
+		
+		\resumeItemListEnd
+		
+		\vspace{1.5em}
+		
+		% V Language
+		\item
+		\textbf{\href{https://vlang.io/}{The V Programming Language \faLink}} \hfill \textbf{Aug 2022 -- Present}\\
+		\textit{Core Developer} \hfill Remote
+		\resumeItemListStart
+		\resumeItem{Contribute as a \textbf{core developer} to V, a compiled, statically typed programming language}
+		\resumeItem{Resolved issues in the compiler’s \textbf{checker}, \textbf{parser}, \textbf{scanner}, and \textbf{code generation} modules to improve stability}
+		\resumeItem{Implemented key features such as \textbf{operator overloading}, \textbf{match branch range expressions}, and \textbf{non-string map keys}}
+		\resumeItem{Authored and maintained documentation and internal libraries to enhance developer experience and ecosystem reliability}
+		\resumeItemListEnd
+		
+		\vspace{1.5em}
+		
+		% Effective.AF
+		\item
+		\textbf{\href{https://effective.af/}{Effective·AF \faLink}} \hfill \textbf{Aug 2023 -- Oct 2023}\\
+		\textit{Software Engineer Intern} \hfill California, United States · Remote
+		\resumeItemListStart
+		\resumeItem{Developed new features for the desktop client using the \textbf{Gio} GUI framework in Go, improving interface responsiveness and usability}
+		\resumeItem{Refactored and optimized the existing \textbf{CLI codebase}, improving maintainability and reducing user friction}
+		\resumeItem{Implemented comprehensive \textbf{error handling} and validation logic, improving system reliability}
+		\resumeItem{Built modular \textbf{Svelte} components, including a chat navigation panel, to streamline user workflows within the web interface}
+		\resumeItemListEnd
+		
+		
+		\resumeSubHeadingListEnd
+		
+		
+		% -------------------------------- RIGHT COLUMN--------------------------------
+		\switchcolumn[1]
+		\raggedright
+		\small
+		
+		\section{Projects}
+		\resumeSubHeadingListStart
+		
+		\resumeProjectHeading
+		{\textbf{\href{https://github.com/Delta456/box-cli-maker}{Box CLI Maker \faLink}}}{Apr 2020}
+		\resumeItemListStart
+		\resumeItem{Engineered a \textbf{Go library} for customizable terminal boxes with ANSI color and text formatting.}
+		\resumeItem{Adopted by \textbf{Kubernetes’ \href{https://github.com/kubernetes/minikube}{minikube}} and multiple OSS tools}
+		\resumeItem{Recognized with \textbf{500+ GitHub stars} and featured in \textit{GoLang Weekly}, \textit{\href{https://github.blog/2022-12-16-release-radar-nov-2022/}{GitHub Release Radar}}, and \textit{\href{https://awesome-go.com/}{Awesome Go}}}
+		\resumeItemListEnd
+		
+		\resumeProjectHeading
+		{\textbf{Go Systems and Backend Projects (Collection)}}{Ongoing}
+		\resumeItemListStart
+		\resumeItem{Developed backend and systems projects — including a \textbf{mini Redis clone}, \textbf{Unix shell}, and backend apps inspired by the \textit{"Let’s Go"} book}
+		\resumeItem{Explored \textbf{network programming}, \textbf{goroutines}, \textbf{channel concurrency}, and \textbf{low-level I/O}}
+		\resumeItemListEnd
+		\resumeSubHeadingListEnd
+		
+		% Modern C++ Article Series
+		\item
+		\textbf{\href{https://github.com/Delta456/modern_cpp_series}{Modern C++ Series \faLink}} 
+		\resumeItemListStart
+		\resumeItem{Authoring an educational article series exploring advanced \textbf{Modern C++} concepts, including lambdas, optionals, raw strings}
+		\resumeItem{Aiming to help developers transition from legacy C++ to modern standards with improved readability and performance practices}
+		\resumeItemListEnd
+		
+		
+		
+		\section{Technical Skills}
+		\small{
+			\textbf{Languages:} Python, Go, C, C++, V, JavaScript, TypeScript, Java \\
+			\textbf{Tools:} VS Code, JetBrains IDEs, Git, Vercel, Bash, Hex Editor, Makefile, Bazel \\
+			\textbf{Frameworks:} Linux, Svelte, Node, Deno, SQL, gRPC
+		}
+		
+		
+		\section{Volunteering / Achievements}
+		\vspace{3pt}
+		\begin{itemize}[leftmargin=0.15in, itemsep=1pt, topsep=1pt, parsep=0pt]
+			\item \textbf{Featured by} \href{https://opensource.org/maintainers/delta456}{\textbf{Open Source Initiative \faLink}} — highlighted among top global maintainers
+			\item \textbf{CFP Reviewer} for \textbf{GopherCon USA} and \href{https://www.credly.com/badges/96656df7-6491-442c-a1ba-19d91db0642b/public_url}{\textbf{Open Source Summit Japan 2025 \faLink}}
+			\item \textbf{Maintainer and Community WG Lead} for OSS in Business at \href{https://todogroup.org/}\textbf{\href{https://todogroup.org/}{TODO Group}}
+			\item \textbf{Contributor to the} \href{https://todogroup.org/resources/book/}{\textbf{OSPO Book \faLink}} — collaborated on the content of the enterprise OSS adoption
+			\item \textbf{Featured guest on} \href{https://www.youtube.com/watch?v=gs8FFp0rAbk}{\textbf{GitHub Open Source Friday \faLink}}
+		\end{itemize}
+		
+		
+		
+		\vspace{2pt}
+		
+		\section{Education}
+		\vspace{2pt}
+		\textbf{KCC Institute of Technology} \hfill \textbf{2022 -- 2026} \\
+		\textit{Bachelor of Technology in Computer Science}
+		
+		
+	\end{paracol}
+	
+	
 \end{center}
 
-%-----------EXPERIENCE-----------
-\section{Experience}
-  \resumeSubHeadingListStart
-
-  \resumeSubheading
-          {\href{https://www.lambdatest.com/}{LambdaTest}}{August 2024 -- Present}
-      {Software Engineer (Open Source) Intern}{Noida, Uttar Pradesh · Hybrid}
-      \resumeItemListStart
-        \resumeItem{Contributing to open-source testing frameworks like \textbf{Selenium} and \textbf{Appium}}
-      \resumeItemListEnd
-
-    \resumeSubheading
-          {\href{https://vlang.io/}{The V Programming Language Organization}}{August 2022 -- Present}
-      {Core Developer}{Remote}
-      \resumeItemListStart
-        \resumeItem{Working as a paid \textbf{part-time} open-source developer for \textbf{The V Programming Language}.}
-        \resumeItem{Fixed \textit{several} checker, parser, scanner, and code generation-related issues in the compiler.}
-        \resumeItem{Implemented features like \textbf{operator overloading}, \textbf{syntax highlighting for v doc}, \textbf{match branch range expressions with constants}, \textbf{non-string map keys}, etc.}
-        \resumeItem{Documented and developed \textit{several} internal libraries of the language.}
-      \resumeItemListEnd
-
-    \resumeSubheading
-          {\href{https://effective.af/}{Effective·AF}}{August 2023 -- October 2023}
-      {Software Engineer Intern}{California, United States · Remote}
-      \resumeItemListStart
-        \resumeItem{Worked on adding new features like  using the Go GUI framework \textbf{Gio}.}
-        \resumeItem{Refactored tons of \textbf{CLI} code for \textit{better usability}.}
-        \resumeItem{Added \textit{error handling} and \textit{added} new checks and features to improve the functionality.}
-        \resumeItem{Worked with \textbf{Svelte} and \textit{made} components like \textbf{left chat panel} which helps to navigate chats.}
-    \resumeItemListEnd
-    
-  \resumeSubHeadingListEnd
-\vspace{-16pt}
-
-%-----------PROJECTS-----------
-\section{Projects}
-    \vspace{-5pt}
-    \resumeSubHeadingListStart
-      \resumeProjectHeading
-          {\textbf{\href{https://github.com/Delta456/box-cli-maker}{Box CLI Maker}} $|$ \emph{Go, ANSI Escape Code, Terminal}}{April 2020}
-          \resumeItemListStart
-            \resumeItem{Make Highly Customized Boxes for CLI.}
-            \resumeItem{Has \textbf{500+ stars} on GitHub.}
-            \resumeItem{\textit{Supports} ANSI, Tabbed, Multi-line and Line Wrapping boxes, 16 Inbuilt Colors and True Color etc.}
-            \resumeItem{Used in \textbf{Kubernetes \href{https://github.com/kubernetes/minikube}{minikube}} and \textit{several} other projects.}
-            \resumeItem{Featured on \href{https://golangweekly.com/}{\textbf{GoLang} \textbf{Weekly}}\textit{ twice} (\href{https://golangweekly.com/issues/340}{issue 340} and \href{https://golangweekly.com/issues/435}{issue 435}), \href{https://github.blog/2022-12-16-release-radar-nov-2022/}{\textbf{GitHub Radar}}, \href{https://githubindia.com/open-source/projects}{\textbf{GitHub India}} and \href{https://awesome-go.com/}{\textbf{Awesome Go}}.}
-          \resumeItemListEnd
-          \vspace{-13pt}
-      \resumeProjectHeading
-          {\textbf{\href{https://github.com/vlang/v}{The V Programming Language}} $|$ \emph{V, C, Shell, Make}}{June 2019}
-          \resumeItemListStart
-            \resumeItem{Simple, fast, safe, compiled language for developing maintainable software.}
-            \resumeItem{One of the \textbf{core developers} of the language.}
-            \resumeItem{Fixed \textit{several} checker, parser, scanner, and code generation-related issues and implemented several features.}
-          \resumeItemListEnd 
-          \vspace{-13pt}  
-          \resumeProjectHeading{\textbf{\href{https://github.com/Delta456/svelte-color-generator}{Svelte Color Generator}} $|$ \emph{JavaScript, Node, ViteJS, Svelte, Vercel, HTML, CSS}}{August 2023}
-          \resumeItemListStart
-            \resumeItem{A color generator made in \textbf{Svelte}.}
-            \resumeItem{Made for learning purposes and \textbf{ported} from a React project.}
-            \resumeItem{Used \textit{several} third-party components for the pop-up and color picker.}
-            \resumeItem{Hosted on \href{https://svelte-color-generator-kappa.vercel.app/}{\textbf{Vercel}}.}
-          \resumeItemListEnd
-    \resumeSubHeadingListEnd
-\vspace{-15pt}
-
-
-%
-%-----------PROGRAMMING SKILLS-----------
-\section{Technical Skills}
- \begin{itemize}[leftmargin=0.15in, label={}]
-    \small{\item{
-     \textbf{Languages}{: Python, Go, C, C++, V, JavaScript, TypeScript} \\
-     \textbf{Developer Tools}{: VS Code, JetBrains IDEs, Git, Vercel, Bash, Hex Editor, Makefile} \\
-     \textbf{Technologies/Frameworks}{: Linux, Svelte, Node, Deno, SQL} \\
-    }}
- \end{itemize}
- \vspace{-16pt}
-
-
-%-----------INVOLVEMENT---------------
-\section{Volunteering / Extracurricular}
-            \resumeItemListStart
-                \resumeItem{A technical writer at \href{https://dev.to/delta456}{\textbf{Dev.to}}, and also work as a moderator for \textbf{C}, \textbf{C++} and \textbf{Go} \textit{language tags}.}
-                \resumeItem{Helps in \textit{organize events} in Delhi with \textbf{City JS India}, \textbf{PyDelhi Conference} and \textbf{FOSS United}.}
-                \resumeItem{Given technical talks in many events and lightning talks at several conferences.}
-                \resumeItem{Running a beginner-oriented article \textit{\href{https://github.com/Delta456/modern_cpp_series}{series}} on \textbf{C++}}
-                \resumeItem{Part of NixOS (nixpkg-maintainers) and catppuccin team}
-                \resumeItem{\textbf{CFP} Reviewer for \textbf{GopherCon USA} 2024}
-                \resumeItem{Featured on \textbf{\href{https://www.youtube.com/watch?v=gs8FFp0rAbk}{GitHub Open Source Friday}} episode}
-            \resumeItemListEnd
-
-            
-%-----------EDUCATION-----------
-\section{Education}
-  \resumeSubHeadingListStart
-    \resumeSubheading
-      {KCC Institute of Technology and Management}{Sep. 2022 -- 2026}
-      {Bachelors of Technology in Computer Science}{Greater Noida, Uttar Pradesh}
-  \resumeSubHeadingListEnd
+% ---------- END TWO-COLUMN BLOCK ----------
 
 \end{document}
