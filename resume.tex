@@ -48,6 +48,7 @@
 \fancyfoot{}
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
+\setlength{\footskip}{4.08003pt}
 
 % Adjust margins
 \addtolength{\oddsidemargin}{-0.6in}
@@ -64,7 +65,7 @@
 
 % Sections formatting
 \titleformat{\section}{
-  \vspace{-4pt}\scshape\raggedright\large\bfseries
+  \vspace{-4pt}\raggedright\large\bfseries
 }{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
 
 % Ensure that generated PDF is machine-readable/ATS parsable
@@ -73,47 +74,20 @@
 %-------------------------
 % Custom commands
 \newcommand{\resumeItem}[1]{
-  \item\small{
-    {#1 \vspace{-2pt}}
-  }
+  \item\small{#1}
 }
 
-\newcommand{\classesList}[4]{
-    \item\small{
-        {#1 #2 #3 #4 \vspace{-2pt}}
-  }
-}
-
-\newcommand{\resumeSubheading}[4]{
-  \vspace{-2pt}\item
-    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
-      \textbf{#1} & \textbf{\small #2} \\
-      \textit{\small#3} & \textit{\small #4} \\
-    \end{tabular*}\vspace{-7pt}
-}
-
-\newcommand{\resumeSubSubheading}[2]{
-    \item
-    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      \textit{\small#1} & \textit{\small #2} \\
-    \end{tabular*}\vspace{-7pt}
-}
-
+% {name with link}{right-hand label}
 \newcommand{\resumeProjectHeading}[2]{
-    \item
-    \begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
-      \small#1 & \textbf{\small #2}\\
-    \end{tabular*}\vspace{-7pt}
+    \vspace{3pt}\item \small#1 \hfill \textbf{\small #2}
 }
-
-\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
 
 \renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
 \renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
 
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
-\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.15in, itemsep=3pt, topsep=3pt, parsep=0pt]}
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
 
 
@@ -126,9 +100,9 @@
 \begin{center}
 	{\Huge \scshape Swastik Baranwal} \\ \vspace{1pt}
 	\small 
-	\href{https://swastik.is-a.dev}{\raisebox{-0.2\height}\faLink\  swastik.is-a.dev} ~|~
-	\href{mailto:swstkbaranwal@gmail.com}{\raisebox{-0.2\height}\faEnvelope\  swstkbaranwal@gmail.com} ~|~
-	\href{https://linkedin.com/in/swastik-baranwal/}{\raisebox{-0.2\height}\faLinkedin\ swastik-baranwal} ~|~
+	\href{https://swastik.is-a.dev}{\raisebox{-0.2\height}\faLink\  swastik.is-a.dev} ~$|$~
+	\href{mailto:swstkbaranwal@gmail.com}{\raisebox{-0.2\height}\faEnvelope\  swstkbaranwal@gmail.com} ~$|$~
+	\href{https://linkedin.com/in/swastik-baranwal/}{\raisebox{-0.2\height}\faLinkedin\ swastik-baranwal} ~$|$~
 	\href{https://github.com/Delta456}{\raisebox{-0.2\height}\faGithub\ Delta456}
 	
 	\vspace{-8pt}
@@ -146,52 +120,40 @@
 		\vspace{5pt}
 		\resumeSubHeadingListStart
 		
-		% LambdaTest
+		% TestMu AI (formerly LambdaTest)
 		\item
-		\textbf{\href{https://www.lambdatest.com/}{LambdaTest \faLink}} \hfill \textbf{Aug 2024 -- Present}\\
-		\textit{Software Engineer (OSPO) Intern} \hfill Noida, Uttar Pradesh · Hybrid
+		\textbf{\href{https://www.testmuai.com/}{TestMu AI (formerly LambdaTest)~\faLink}} \hfill \textbf{Aug 2024 -- Present}\\
+		\textit{Member of Technical Staff -- Open Source Engineer} \hfill Noida · Onsite
 		\resumeItemListStart
-		\resumeItem{Strengthened Selenium’s ecosystem by contributing \textbf{\href{https://w3c.github.io/webdriver-bidi/}{BiDi protocol}} support and performance improvements}
-		\resumeItem{Served as a \textbf{\href{https://www.selenium.dev/project/structure/\#selenium_committers}{committer}} to Selenium, facilitating LambdaTest’s recognition as an official \textbf{\href{https://www.selenium.dev/blog/2025/lambdatest-selenium-partnership/}{development partner \faLink}}}
-		\resumeItem{Implemented services in \textbf{\href{https://github.com/appium/appium-ios-remotexpc}{Appium iOS RemoteXPC}} to enable iOS device communication}
-        \resumeItem{Contributed code to \textbf{\href{https://webdriver.io/}{WebDriverIO}} and updated documentation for \href{https://github.com/MicrosoftDocs/edge-developer/pulls?q=is\%3Apr+author\%3ADelta456+is\%3Amerged}{\textbf{Microsoft Edge Developer}} to reflect the newly made changes}
-		\resumeItem{Collaborated on Selenium 5’s upcoming \textbf{high-level BiDi syntax}, influencing API design decisions across automation frameworks}
-		\resumeItem{Moderated the global \textbf{Hacktoberfest} event, mentoring new contributors and facilitating high-quality open-source pull requests}
-		\resumeItem{Expanded technical proficiency in \textbf{developer tool building}, \textbf{TypeScript/Python/Java development}, and \textbf{open-source governance}}
-		\resumeItem{Represented LambdaTest at international conferences including \textbf{KubeCon India 2024 - OSPOLogy BoF}, where I authored the official session \href{https://github.com/todogroup/ospology/blob/main/BoF/India2024_Report/Report.pdf}{report \faLink} and participated as a \textbf{panelist} in \textbf{\href{https://openuk.uk/indianaisummit/ai-openness-and-access-for-all-delhi/}{OpenUK - Openness and Access for All \faLink}}}
-		
-		
+		\resumeItem{\textbf{Built observability for \href{https://github.com/LambdaTest/rook}{rook}}, TestMu AI's CLI for testing AI agents: request-scoped logging from its Go services into Sumo Logic, routing only dashboard lines to the paid tier and dropping health-probe noise, which was half of all log volume}
+		\resumeItem{\textbf{Built Sumo Logic and New Relic dashboards for stage and prod}: p95/p99 latency per route, release health per deploy and LLM cost per role; New Relic alerts routed to Slack caught credits-service failures, credit outages and 5xx errors}
+		\resumeItem{\textbf{Kept Appium's iOS automation working} when Apple moved device services to the new RemoteXPC protocol: built 10 iOS device services, including DVT instruments, notification proxy and springboard, in \href{https://github.com/appium/appium-ios-remotexpc}{Appium iOS RemoteXPC} (1.3M+ monthly downloads) and shipped them in the \href{https://github.com/appium/appium-xcuitest-driver}{XCUITest driver} (4M+ monthly)}
+		\resumeItem{\textbf{\href{https://github.com/appium}{Appium org member}}; \textbf{implemented iOS 18+ Web Inspector support} in the \href{https://github.com/appium/appium-remote-debugger}{Remote Debugger} to keep web view testing working, and fixed a hang on iOS 26}
+		\resumeItem{\textbf{Secured official development partner status} for TestMu AI with \href{https://www.selenium.dev/blog/2025/lambdatest-selenium-partnership/}{Selenium~\faLink} and \href{https://appium.io/docs/en/3.2/blog/2025/11/25/announcing-lambdatest-as-appiums-newest-development-partner/}{Appium~\faLink}, the leading open-source web and mobile automation frameworks}
+		\resumeItem{\textbf{\href{https://www.selenium.dev/project/structure/\#selenium_committers}{Selenium committer}} with 60+ merged PRs; \textbf{shipped 12 \href{https://w3c.github.io/webdriver-bidi/}{WebDriver BiDi} features} in the Java bindings for cross-browser network, geolocation and timezone emulation, and helped shape Selenium 5's high-level BiDi API}
+		\resumeItem{\textbf{Added 6 tools to \href{https://github.com/appium/appium-mcp}{Appium MCP}}, which lets AI agents drive real mobile devices, including screen recording and app state, and consolidated its app and session tools}
+		\resumeItem{\textbf{Built Terminal Studio} for \href{https://github.com/appclawhq/AppClaw}{AppClaw}, a TUI that runs plain-English steps on a live device and exports them as runnable tests, plus iOS simulator streaming}
 		\resumeItemListEnd
 		
 		\vspace{1.5em}
 		
 		% V Language
 		\item
-		\textbf{\href{https://vlang.io/}{The V Programming Language \faLink}} \hfill \textbf{Aug 2022 -- Present}\\
+		\textbf{\href{https://vlang.io/}{The V Programming Language~\faLink}} \hfill \textbf{Aug 2022 -- Present}\\
 		\textit{Core Developer} \hfill Remote
 		\resumeItemListStart
-		\resumeItem{Contribute as a \textbf{core developer} to V, a compiled, statically typed programming language}
-		\resumeItem{Resolved issues in the compiler’s \textbf{checker}, \textbf{parser}, \textbf{scanner}, and \textbf{code generation} modules to improve stability}
-		\resumeItem{Implemented key features such as \textbf{operator overloading}, \textbf{match branch range expressions}, and \textbf{non-string map keys}}
-		\resumeItem{Authored and maintained documentation and internal libraries to enhance developer experience and ecosystem reliability}
+		\resumeItem{\textbf{340+ merged PRs} across the parser, type checker, scanner and C code generator of V, a compiled systems language}
+		\resumeItem{\textbf{Hardened type safety with 91 compile-time checks} that reject unsafe or invalid code, such as const integer overflow, casts outside \texttt{unsafe} and misused option/result types}
+		\resumeItem{\textbf{Designed language features}: operator overloading where users define only \texttt{==} and \texttt{<} and the compiler derives \texttt{!=}, \texttt{>}, \texttt{>=} and \texttt{<=}, extended to aliases and generics; plus \texttt{\&\&=} and \texttt{||=} operators and consts in match ranges}
+		\resumeItem{\textbf{Improved developer tooling}: colored syntax highlighting and per-OS docs in \texttt{v doc} (10+ PRs), and packaged V for \href{https://github.com/NixOS/nixpkgs}{nixpkgs}}
 		\resumeItemListEnd
-		
-		\vspace{1.5em}
-		
-		% Effective.AF
-		\item
-		\textbf{\href{https://effective.af/}{Effective·AF \faLink}} \hfill \textbf{Aug 2023 -- Oct 2023}\\
-		\textit{Software Engineer Intern} \hfill California, United States · Remote
-		\resumeItemListStart
-		\resumeItem{Developed new features for the desktop client using the \textbf{Gio} GUI framework in Go, improving interface responsiveness and usability}
-		\resumeItem{Refactored and optimized the existing \textbf{CLI codebase}, improving maintainability and reducing user friction}
-		\resumeItem{Implemented comprehensive \textbf{error handling} and validation logic, improving system reliability}
-		\resumeItem{Built modular \textbf{Svelte} components, including a chat navigation panel, to streamline user workflows within the web interface}
-		\resumeItemListEnd
-		
 		
 		\resumeSubHeadingListEnd
 		
+		\section{Education}
+		\vspace{2pt}
+		\textbf{KCC Institute of Technology} \hfill \textbf{2022 -- 2026} \\
+		\textit{B.Tech in Computer Science} \hfill \textit{Graduated}
 		
 		% -------------------------------- RIGHT COLUMN--------------------------------
 		\switchcolumn[1]
@@ -202,61 +164,52 @@
 		\resumeSubHeadingListStart
 		
 		\resumeProjectHeading
-		{\textbf{\href{https://github.com/Delta456/box-cli-maker}{Box CLI Maker \faLink}}}{Apr 2020}
+		{\textbf{\href{https://github.com/box-cli-maker/box-cli-maker}{Box CLI Maker~\faLink}}}{2020 -- Present}
 		\resumeItemListStart
-		\resumeItem{Engineered a \textbf{Go library} for customizable terminal boxes with ANSI color and text formatting.}
-		\resumeItem{Adopted by \textbf{Kubernetes’ \href{https://github.com/kubernetes/minikube}{minikube}} and multiple OSS tools}
-		\resumeItem{Recognized with \textbf{500+ GitHub stars} and featured in \textit{GoLang Weekly}, \textit{\href{https://github.blog/2022-12-16-release-radar-nov-2022/}{GitHub Release Radar}}, and \textit{\href{https://awesome-go.com/}{Awesome Go}}}
+		\resumeItem{\textbf{Go library for rendering highly customizable terminal boxes}, used by Kubernetes' \href{https://github.com/kubernetes/minikube}{minikube}; featured in \href{https://github.blog/open-source/release-radar-nov-2022/}{GitHub Release Radar} and \href{https://awesome-go.com/}{Awesome Go}}
 		\resumeItemListEnd
 		
 		\resumeProjectHeading
-		{\textbf{Go Systems and Backend Projects (Collection)}}{Ongoing}
+		{\textbf{\href{https://github.com/search?q=is\%3Apr+author\%3ADelta456+is\%3Amerged\&type=pullrequests}{Open Source~\faLink}}}{660+ PRs · 80+ repos}
 		\resumeItemListStart
-		\resumeItem{Developed backend and systems projects — including a \textbf{mini Redis clone}, \textbf{Unix shell}, and backend apps inspired by the \textit{"Let’s Go"} book}
-		\resumeItem{Explored \textbf{network programming}, \textbf{goroutines}, \textbf{channel concurrency}, and \textbf{low-level I/O}}
+		\resumeItem{\textbf{Charm}: ENV and copy/paste commands in \href{https://github.com/charmbracelet/vhs}{VHS}; \texttt{WithInput} and \texttt{WithTimeout} in \href{https://github.com/charmbracelet/huh}{Huh}}
+		\resumeItem{\textbf{10+ PRs to \href{https://webdriver.io/}{WebdriverIO}} and 20+ to the \href{https://www.selenium.dev/}{Selenium website}, plus a GitHub CLI fix}
+		\resumeItemListEnd
+		
+		\resumeProjectHeading
+		{\textbf{\href{https://github.com/Delta456/monkey_v}{Monkey Interpreter in V~\faLink}}}{}
+		\resumeItemListStart
+		\resumeItem{\textbf{Tree-walking interpreter} with closures, hashes and a macro system, following \textit{Writing an Interpreter in Go}}
+		\resumeItemListEnd
+		
+		\resumeProjectHeading
+		{\textbf{\href{https://github.com/Delta456/modern_cpp_series}{Modern C++ Series~\faLink}}}{}
+		\resumeItemListStart
+		\resumeItem{\textbf{Ongoing 9-part series since 2019}, 2 parts published on \href{https://builtin.com/articles/stdoptional}{Built In}: \texttt{constexpr}, lambdas, \texttt{std::optional} and variadic templates, each with runnable code}
 		\resumeItemListEnd
 		\resumeSubHeadingListEnd
 		
-		% Modern C++ Article Series
-		\item
-		\textbf{\href{https://github.com/Delta456/modern_cpp_series}{Modern C++ Series \faLink}} 
-		\resumeItemListStart
-		\resumeItem{Authoring an educational article series exploring advanced \textbf{Modern C++} concepts, including lambdas, optionals, raw strings}
-		\resumeItem{Aiming to help developers transition from legacy C++ to modern standards with improved readability and performance practices}
-		\resumeItemListEnd
-		
-		
-		
 		\section{Technical Skills}
-		\small{
-			\textbf{Languages:} Python, Go, C, C++, V, JavaScript, TypeScript, Java \\
-			\textbf{Tools:} VS Code, JetBrains IDEs, Git, Vercel, Bash, Hex Editor, Makefile, Bazel \\
-			\textbf{Frameworks:} Linux, Svelte, Node, Deno, SQL, gRPC
+		{\small
+			\textbf{Languages:} TypeScript, Java, Python, Go, Rust, C++ \\
+			\textbf{Build \& CI:} Bazel, Make, GitHub Actions \\
+			\textbf{Observability:} OpenTelemetry, Sumo Logic, New Relic \\
+			\textbf{Tools:} Node.js, Deno, React (Ink)
 		}
-		
 		
 		\section{Volunteering / Achievements}
 		\vspace{3pt}
-		\begin{itemize}[leftmargin=0.15in, itemsep=1pt, topsep=1pt, parsep=0pt]
-			\item \textbf{Featured by} \href{https://opensource.org/maintainers/delta456}{\textbf{Open Source Initiative \faLink}} — highlighted among top global maintainers
-			\item \textbf{CFP Reviewer} for \textbf{GopherCon USA} and \href{https://www.credly.com/badges/96656df7-6491-442c-a1ba-19d91db0642b/public_url}{\textbf{Open Source Summit Japan 2025 \faLink}}
-			\item \textbf{Maintainer and Community WG Lead} for OSS in Business at \href{https://todogroup.org/}\textbf{\href{https://todogroup.org/}{TODO Group}}
-			\item \textbf{Contributor to the} \href{https://todogroup.org/resources/book/}{\textbf{OSPO Book \faLink}} — collaborated on the content of the enterprise OSS adoption
-			\item \textbf{Featured guest on} \href{https://www.youtube.com/watch?v=gs8FFp0rAbk}{\textbf{GitHub Open Source Friday \faLink}}
+		\begin{itemize}[leftmargin=0.15in, itemsep=3pt, topsep=1pt, parsep=0pt]
+			\item \textbf{TODO Group OSPO Ambassador}, \href{https://todogroup.org/blog/2026-08-31-ambassador-swastik/}{the first in India~\faLink}; Co-chair, OSS in Business WG
+			\item \textbf{Program Committee}, Open Source Summit Japan \href{https://www.credly.com/badges/c743ea5c-11a6-4338-adcd-9bc48cc2e54a/public_url}{2026~\faLink} and \href{https://www.credly.com/badges/96656df7-6491-442c-a1ba-19d91db0642b/public_url}{2025~\faLink}; CFP Reviewer, GopherCon USA
+			\item \textbf{Speaker}: \href{https://openuk.uk/event-calendar/ai-openness-and-access-for-all-delhi/}{OpenUK panel~\faLink} and \href{https://www.youtube.com/watch?v=gs8FFp0rAbk}{GitHub Open Source Friday~\faLink}
+			\item \textbf{Featured} among top global maintainers by the \href{https://opensource.org/maintainers/delta456}{Open Source Initiative~\faLink}
+			\item \textbf{Contributor} to the \href{https://todogroup.org/resources/book/}{OSPO Book~\faLink} and the KubeCon India 2024 OSPOlogy BoF \href{https://github.com/todogroup/ospology/blob/main/BoF/India2024_Report/Report.pdf}{report~\faLink}; Hacktoberfest moderator
 		\end{itemize}
 		
-		
-		
-		\vspace{2pt}
-		
-		\section{Education}
-		\vspace{2pt}
-		\textbf{KCC Institute of Technology} \hfill \textbf{2022 -- 2026} \\
-		\textit{Bachelor of Technology in Computer Science}
-		
+
 		
 	\end{paracol}
-	
 	
 \end{center}
 
